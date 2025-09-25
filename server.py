@@ -25,7 +25,6 @@ class MyServer(BaseHTTPRequestHandler):
             self.end_headers()
             self.wfile.write("Ошибка 404: Файл index.html не найден".encode('utf-8'))
 
-
 if __name__ == "__main__":
     webServer = HTTPServer((hostName, serverPort), MyServer)
     print(f"Сервер запущен на http://{hostName}:{serverPort}")
